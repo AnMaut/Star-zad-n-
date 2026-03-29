@@ -26,6 +26,18 @@ def get_students_results_dict(data_dict):
 
     return names
 
+def remove_student_from_all_schools(schools_data,
+                                    studen_name):
+    for data in schools_data.values():
+        for name_list in data:
+            if name_list[0] == studen_name:
+                data.remove(name_list)
+    return schools_data
+
+
+
+
+
 # ----------------------------------
 # school_dict = {}
 #
@@ -37,7 +49,7 @@ def get_students_results_dict(data_dict):
 #             nam_pref_list.append(nm_prf_tuple)
 #             # print(nam_pref_list)
 #     school_dict[school] = nam_pref_list
-#     print(school_dict)
+#     # print(school_dict)
 #
 # names = {}
 #
@@ -45,7 +57,12 @@ def get_students_results_dict(data_dict):
 #     for name_data in data_list:
 #         # if name_data[0] not in names:
 #         names[name_data[0]] = NEZARAZEN
-# print(names)
-# #
+# # print(names)
 #
-
+# name = "Barbora"
+#
+# for data in school_dict.values():
+#     for name_list in data:
+#         if name_list[0] == name:
+#             data.remove(name_list)
+# print(school_dict)
