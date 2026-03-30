@@ -1,0 +1,10 @@
+[project]
+name = "assignment-microscope-stage"
+version = "0.1.0"
+description = "Control of a microscope motorized stage"
+readme = "README.md"
+requires-python = ">=3.11"
+dependencies = ["pytest"]
+
+[tool.pytest.ini_options]
+pythonpath = ["."]
